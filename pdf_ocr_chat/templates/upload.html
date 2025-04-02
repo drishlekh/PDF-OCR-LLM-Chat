@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">PDF OCR & Chat</h1>
+    <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+        <form method="POST" enctype="multipart/form-data" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium mb-2">Upload PDF File</label>
+                <input type="file" name="file" accept=".pdf" class="block w-full text-sm text-gray-400
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-md file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-blue-500 file:text-white
+                    hover:file:bg-blue-600
+                    cursor-pointer">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Process PDF
+            </button>
+        </form>
+    </div>
+    <div class="mt-8 text-gray-400 text-sm">
+        <p>This application will:</p>
+        <ol class="list-decimal pl-5 mt-2 space-y-1">
+            <li>Extract text from your PDF (or perform OCR if needed)</li>
+            <li>Allow you to chat with the document using AI</li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
